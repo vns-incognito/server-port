@@ -435,6 +435,97 @@ textarea {
   margin-bottom: 28px;
 }
 
+/* Consultancy calculator */
+.section-calculator {
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at top, rgba(228, 255, 74, 0.09), transparent 65%);
+}
+
+.calculator-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.9fr);
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.calculator-control {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+  background: linear-gradient(150deg, rgba(10, 13, 18, 0.98), #050608);
+  padding: 18px 18px 16px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.calculator-label {
+  display: block;
+  font-size: 12px;
+  color: var(--fg-soft);
+  margin-bottom: 6px;
+}
+
+.calculator-select {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: rgba(5, 7, 11, 0.95);
+  padding: 9px 12px;
+  font-size: 13px;
+  outline: none;
+}
+
+.calculator-select:focus {
+  border-color: rgba(228, 255, 74, 0.55);
+  box-shadow: 0 0 0 1px rgba(228, 255, 74, 0.3);
+}
+
+.calculator-hint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--fg-soft);
+}
+
+.calculator-results {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+  background: radial-gradient(circle at 0 0, rgba(228, 255, 74, 0.22), transparent 65%),
+    linear-gradient(150deg, var(--bg-soft), #050608);
+  padding: 18px 18px 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.calculator-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 13px;
+}
+
+.calculator-metric.compact {
+  font-size: 12px;
+}
+
+.calculator-metric-label {
+  color: var(--fg-soft);
+}
+
+.calculator-metric-value {
+  font-weight: 500;
+}
+
+.calculator-metric-value.highlight {
+  color: var(--accent);
+}
+
+.calculator-footnote {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--fg-soft);
+}
+
 .bento-grid {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1.7fr);
