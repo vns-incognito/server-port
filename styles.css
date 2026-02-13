@@ -320,6 +320,22 @@ textarea {
   text-transform: uppercase;
   color: var(--fg-soft);
   background: var(--pill-bg);
+  transition: background-color 180ms ease, border-color 180ms ease,
+    color 180ms ease, opacity 180ms ease, transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.bento-toggle {
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+.pill.is-active {
+  border-color: rgba(228, 255, 74, 0.6);
+  background: var(--accent-soft);
+  color: #f7f8ff;
+  opacity: 1;
+  box-shadow: 0 0 0 1px rgba(228, 255, 74, 0.4);
 }
 
 .pill-soft {
@@ -531,10 +547,6 @@ textarea {
   grid-template-columns: minmax(0, 2fr) minmax(0, 1.7fr);
   grid-auto-rows: minmax(210px, auto);
   gap: 18px;
-  grid-template-areas:
-    "highlight highlight"
-    "highlight case2"
-    "case1 case3";
 }
 
 .bento-card {
@@ -577,7 +589,7 @@ textarea {
 }
 
 .bento-card.highlight {
-  grid-area: highlight;
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.5fr);
   gap: 16px;
@@ -587,6 +599,16 @@ textarea {
       transparent 54%
     ),
     linear-gradient(150deg, #111524, #080a10);
+}
+
+.bento-card.highlight[data-variant="enterprise-saas"] {
+  background: radial-gradient(
+      circle at 100% 0,
+      rgba(122, 166, 255, 0.28),
+      transparent 60%
+    ),
+    linear-gradient(150deg, #101529, #070811);
+  border-color: rgba(122, 166, 255, 0.6);
 }
 
 .bento-card.highlight h3 {
@@ -803,11 +825,6 @@ textarea {
   .bento-grid {
     grid-template-columns: minmax(0, 1fr);
     grid-auto-rows: auto;
-    grid-template-areas:
-      "highlight"
-      "case1"
-      "case2"
-      "case3";
   }
 
   .bento-card.highlight {
