@@ -157,6 +157,7 @@
                   <option value="">Select a business type</option>
                   <option value="freelancer">Independent consultant / freelancer</option>
                   <option value="agency">Agency or studio</option>
+                  <option value="enterprise-saas">Enterprise SaaS company</option>
                   <option value="ecommerce">E‑commerce brand</option>
                   <option value="coach">Coach / expert business</option>
                   <option value="startup">Product startup</option>
@@ -211,18 +212,32 @@
             </div>
 
             <div class="bento-grid">
-              <article class="bento-card highlight">
+              <article class="bento-card highlight" data-variant="case-study">
                 <div class="card-tag-row">
-                  <span class="pill pill-soft">Case Study</span>
-                  <span class="pill pill-outline">Enterprise SaaS</span>
+                  <button
+                    type="button"
+                    class="pill pill-soft bento-toggle is-active"
+                    data-variant="case-study"
+                  >
+                    Case Study
+                  </button>
+                  <button
+                    type="button"
+                    class="pill pill-outline bento-toggle"
+                    data-variant="enterprise-saas"
+                  >
+                    Enterprise SaaS
+                  </button>
                 </div>
-                <h3>Reducing support volume with retrieval-augmented assistants.</h3>
-                <p>
+                <h3 id="highlight-title">
+                  Reducing support volume with retrieval-augmented assistants.
+                </h3>
+                <p id="highlight-body">
                   Designed and shipped an RAG-based assistant for a global SaaS
                   platform, surfacing precise answers from policy, product, and
                   historical ticket data.
                 </p>
-                <dl class="card-metrics">
+                <dl class="card-metrics" id="highlight-metrics">
                   <div>
                     <dt>Deflection rate</dt>
                     <dd>38% self-resolved tickets</dd>
